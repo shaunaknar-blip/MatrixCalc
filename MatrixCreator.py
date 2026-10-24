@@ -8,6 +8,9 @@ def matrix_create():
         try:
             n = int(input("Enter the number of columns: "))
             m = int(input("Enter the number of rows: "))
+            if n <= 0 or m <= 0:
+                print("Please enter positive integers for the number of rows and columns.")
+                continue
             break
         except ValueError:
             print("Please enter valid integers.")
@@ -28,4 +31,5 @@ def matrix_create():
     MatrixPrint.matprint(mat_list)
     print()
     return mat_list, m, n
+matrix_create()
 '''I have returned the matrix along with the number of rows and columns so that they can be used in other functions without having to recalculate them.'''
